@@ -18,7 +18,7 @@
   <meta name="author" content="What Damon">
   <meta name="keywords" content="damon233">
   
-  <title>关于 - What_Damon的窝</title>
+  <title>升级到Windows 11后黑屏死机：WDF VIOLATION - What_Damon的窝</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -34,6 +34,8 @@
     
   
 
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
@@ -62,7 +64,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -168,14 +170,51 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/bsodwdfviolation.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="关于">
+            <span class="h2" id="subtitle" title="升级到Windows 11后黑屏死机：WDF VIOLATION">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-10-05 21:39" pubdate>
+        2021年10月5日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      694 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      7
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -188,102 +227,122 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/avatar.png" srcset="/img/loading.gif" lazyload
-                   class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">What_Damon</div>
-    <div class="about-intro">B站不知名咕咕咕UP主</div>
-    <div class="about-icons">
-      
-        
-        
-        
-        <a href=https://github.com/whatdamon class="
-           hint--bottom hint--rounded"
-           aria-label=GitHub
-           target="_blank"
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
-      
-        
-        
-        
-        <a href=https://www.zhihu.com/people/what-damon class="
-           hint--bottom hint--rounded"
-           aria-label=知乎
-           target="_blank"
-        >
-          <i class="iconfont icon-zhihu-fill" aria-hidden="true"></i>
-          
-        </a>
-      
-        
-        
-        
-        <a href=https://space.bilibili.com/351191993 class="
-           hint--bottom hint--rounded"
-           aria-label=Bilibili
-           target="_blank"
-        >
-          <i class="iconfont icon-bilibili" aria-hidden="true"></i>
-          
-        </a>
-      
-        
-        
-        
-        <a href=https://gitee.com/whatdamon class="
-           hint--bottom hint--rounded"
-           aria-label=码云
-           target="_blank"
-        >
-          <i class="iconfont icon-gitee-fill" aria-hidden="true"></i>
-          
-        </a>
-      
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">升级到Windows 11后黑屏死机：WDF VIOLATION</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Begin"><a href="#Begin" class="headerlink" title="Begin"></a>Begin</h1><p>10月5日，Windows 11正式发布，很多人都进行了更新，我也一样[doge]</p>
+<p>但是从不符合最低配置的设备更新，驱动上总会有那么点问题，我遇到了一个，错误代码为<strong>WDF VIOLATION</strong></p>
+<p><img src="/img/bsod-wdf.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>死机后我进入了安全模式查了Dump，发现问题所在，网上对于这个问题的解决方法大多时惠普的，不够完整，这次我带来了两个，当然为了方便，惠普也会提到</p>
+<h1 id="BODY"><a href="#BODY" class="headerlink" title="BODY"></a>BODY</h1><h2 id="Mac电脑"><a href="#Mac电脑" class="headerlink" title="Mac电脑"></a>Mac电脑</h2><p>我就是用Mac的，这件事情整了我半天，现在告诉你哪里有问题</p>
+<p>先看看报告</p>
+<p><img src="/img/BSV-wdf.png" srcset="/img/loading.gif" lazyload></p>
+<p>会发现主要问题出在一个叫MacHALDriver.sys的驱动文件，还有ntoskrnl,exe和Wdf01000.sys都不是最重要的</p>
+<p>先说一下，MacHALDriver.sys是Bootcamp(启动助理)安装时释放的驱动程序，据我考证，Bootcamp 3.1就已经存在了，不够我还没有发现有什么用。。。</p>
+<p>好，开始教你如何解决</p>
+<ol>
+<li>关机</li>
+<li>启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li>
+<li>再次启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li>
+<li>继续启动，启动Windows RE(如果你<strong>启用了BitLocker</strong>，需要输入<strong>加密密钥</strong>)</li>
+<li><strong>不要点击重新启动</strong>，点击另外一个选项进入“选择一个选项”，然后依次点击“疑难解答”&gt;“高级选项”&gt;“命令提示符”</li>
+<li>输入<code>C:</code>，回车</li>
+<li>输入<code>cd c:\windows\system32\drivers</code>，回车</li>
+<li>输入<code>ren MacHALDriver.sys MacHALDriver.sys.bak</code>，回车</li>
+<li>输入<code>exit</code>，回车</li>
+</ol>
+<p>电脑重启后，问题应该修复了</p>
+<h2 id="惠普"><a href="#惠普" class="headerlink" title="惠普"></a>惠普</h2><p>我没有惠普电脑，但按照网上教程，大概是这样</p>
+<ol>
+<li>关机</li>
+<li>启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li>
+<li>再次启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li>
+<li>继续启动，启动Windows RE(如果你<strong>启用了BitLocker</strong>，需要输入<strong>加密密钥</strong>)</li>
+<li><strong>不要点击重新启动</strong>，点击另外一个选项进入“选择一个选项”，然后依次点击“疑难解答”&gt;“高级选项”&gt;“命令提示符”</li>
+<li>输入<code>C:</code>，回车</li>
+<li>输入<code>cd c:\windows\system32\drivers</code>，回车</li>
+<li>输入<code>ren HpqKbFiltr.sys HpqKbFiltr.sys.bak</code>，回车</li>
+<li>输入<code>exit</code>，回车</li>
+</ol>
+<h1 id="End"><a href="#End" class="headerlink" title="End"></a>End</h1><p>你这么一看，两者解决方法是不是很像</p>
+<p>其实就是把不支持的驱动给硬核禁用掉（改驱动名），当然不要再主系统尝试，权限不够的！</p>
+<p>以上操作也可以再Windows PE中实现，其实就是改改名嘛，安全模式还没有试过</p>
+<hr>
+<p><strong>相关链接：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/sbs/windows/%E8%A7%A3%E5%86%B3%E8%93%9D%E5%B1%8F%E9%94%99%E8%AF%AF-5c62726c-6489-52da-a372-3f73142c14ad?ui=zh-CN&rs=zh-CN&ad=CN">蓝屏错误疑难解答 (microsoft.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/fd8044fa0bf3085030137a79.html">WDF VIOLATION 你的电脑遇到问题，需要重新启动-百度经验 (baidu.com)</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Windows/">Windows</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/BiliProblems/">
+                        <span class="hidden-mobile">史上最强哔哩哔哩客户端的问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
     </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="🏠-关于本站…"><a href="#🏠-关于本站…" class="headerlink" title="🏠 关于本站…"></a>🏠 关于本站…</h2><p>What_Damon的Blog（亦称：窝）啦</p>
-<h2 id="👨‍💻-博主是谁"><a href="#👨‍💻-博主是谁" class="headerlink" title="👨‍💻 博主是谁???"></a>👨‍💻 博主是谁???</h2><p>What_Damon啊！！！！</p>
-<h2 id="⛹-兴趣爱好"><a href="#⛹-兴趣爱好" class="headerlink" title="⛹ 兴趣爱好?!?"></a>⛹ 兴趣爱好?!?</h2><p>为什么要告诉你？</p>
-<h2 id="📬-联系我呀"><a href="#📬-联系我呀" class="headerlink" title="📬 联系我呀!!!"></a>📬 联系我呀!!!</h2><h3 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h3><p><a href="mailto:&#51;&#x32;&#55;&#50;&#53;&#55;&#53;&#x31;&#49;&#x35;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#x6d;">&#51;&#x32;&#55;&#50;&#53;&#55;&#53;&#x31;&#49;&#x35;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#x6d;</a><br><a href="mailto:&#x77;&#x68;&#x61;&#x74;&#100;&#x61;&#109;&#111;&#x6e;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#x6d;">&#x77;&#x68;&#x61;&#x74;&#100;&#x61;&#109;&#111;&#x6e;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#x6d;</a></p>
-<h3 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h3><p>3272575115（主）</p>
-<p>1632349820</p>
-<h3 id="Bilibili"><a href="#Bilibili" class="headerlink" title="Bilibili"></a>Bilibili</h3><p>Name: What_Damon<br>UID: 351191993</p>
-<h2 id="👴爷的类型"><a href="#👴爷的类型" class="headerlink" title="👴爷的类型^^^"></a>👴爷的类型^^^</h2><p>学    生    党<br>同时我也是一个 个  人  开  发  者？</p>
-<h6 id="额。。。。应该没了吧。。。"><a href="#额。。。。应该没了吧。。。" class="headerlink" title="额。。。。应该没了吧。。。"></a>额。。。。应该没了吧。。。</h6>
-  </div>
+<!-- Custom -->
 
-  
-</article>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     
 
     
@@ -363,7 +422,11 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
 
 
 

@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>升级到Windows 11后黑屏死机：WDF VIOLATION</title>
+    <link href="/UpToWin11WithStopCode-WDF-VIOLATION/"/>
+    <url>/UpToWin11WithStopCode-WDF-VIOLATION/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Begin"><a href="#Begin" class="headerlink" title="Begin"></a>Begin</h1><p>10月5日，Windows 11正式发布，很多人都进行了更新，我也一样[doge]</p><p>但是从不符合最低配置的设备更新，驱动上总会有那么点问题，我遇到了一个，错误代码为<strong>WDF VIOLATION</strong></p><p><img src="/img/bsod-wdf.jpg"></p><p>死机后我进入了安全模式查了Dump，发现问题所在，网上对于这个问题的解决方法大多时惠普的，不够完整，这次我带来了两个，当然为了方便，惠普也会提到</p><h1 id="BODY"><a href="#BODY" class="headerlink" title="BODY"></a>BODY</h1><h2 id="Mac电脑"><a href="#Mac电脑" class="headerlink" title="Mac电脑"></a>Mac电脑</h2><p>我就是用Mac的，这件事情整了我半天，现在告诉你哪里有问题</p><p>先看看报告</p><p><img src="/img/BSV-wdf.png"></p><p>会发现主要问题出在一个叫MacHALDriver.sys的驱动文件，还有ntoskrnl,exe和Wdf01000.sys都不是最重要的</p><p>先说一下，MacHALDriver.sys是Bootcamp(启动助理)安装时释放的驱动程序，据我考证，Bootcamp 3.1就已经存在了，不够我还没有发现有什么用。。。</p><p>好，开始教你如何解决</p><ol><li>关机</li><li>启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li><li>再次启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li><li>继续启动，启动Windows RE(如果你<strong>启用了BitLocker</strong>，需要输入<strong>加密密钥</strong>)</li><li><strong>不要点击重新启动</strong>，点击另外一个选项进入“选择一个选项”，然后依次点击“疑难解答”&gt;“高级选项”&gt;“命令提示符”</li><li>输入<code>C:</code>，回车</li><li>输入<code>cd c:\windows\system32\drivers</code>，回车</li><li>输入<code>ren MacHALDriver.sys MacHALDriver.sys.bak</code>，回车</li><li>输入<code>exit</code>，回车</li></ol><p>电脑重启后，问题应该修复了</p><h2 id="惠普"><a href="#惠普" class="headerlink" title="惠普"></a>惠普</h2><p>我没有惠普电脑，但按照网上教程，大概是这样</p><ol><li>关机</li><li>启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li><li>再次启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li><li>继续启动，启动Windows RE(如果你<strong>启用了BitLocker</strong>，需要输入<strong>加密密钥</strong>)</li><li><strong>不要点击重新启动</strong>，点击另外一个选项进入“选择一个选项”，然后依次点击“疑难解答”&gt;“高级选项”&gt;“命令提示符”</li><li>输入<code>C:</code>，回车</li><li>输入<code>cd c:\windows\system32\drivers</code>，回车</li><li>输入<code>ren HpqKbFiltr.sys HpqKbFiltr.sys.bak</code>，回车</li><li>输入<code>exit</code>，回车</li></ol><h1 id="End"><a href="#End" class="headerlink" title="End"></a>End</h1><p>你这么一看，两者解决方法是不是很像</p><p>其实就是把不支持的驱动给硬核禁用掉（改驱动名），当然不要再主系统尝试，权限不够的！</p><p>以上操作也可以再Windows PE中实现，其实就是改改名嘛，安全模式还没有试过</p><hr><p><strong>相关链接：</strong></p><p><a href="https://support.microsoft.com/zh-cn/sbs/windows/%E8%A7%A3%E5%86%B3%E8%93%9D%E5%B1%8F%E9%94%99%E8%AF%AF-5c62726c-6489-52da-a372-3f73142c14ad?ui=zh-CN&rs=zh-CN&ad=CN">蓝屏错误疑难解答 (microsoft.com)</a></p><p><a href="https://jingyan.baidu.com/article/fd8044fa0bf3085030137a79.html">WDF VIOLATION 你的电脑遇到问题，需要重新启动-百度经验 (baidu.com)</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>史上最强哔哩哔哩客户端的问题</title>
+    <link href="/BiliProblems/"/>
+    <url>/BiliProblems/</url>
+    
+    <content type="html"><![CDATA[<h3 id="注"><a href="#注" class="headerlink" title="注"></a>注</h3><p>这些问题皆来自开源后的**<u><em>第5个版本</em></u><strong>，来自GITHUB的</strong>已编译**版本不确定在后面版本是否会出现</p><h2 id="问题概览"><a href="#问题概览" class="headerlink" title="问题概览"></a>问题概览</h2><ol><li>AV与BV显示不统一</li><li>快进过度NB</li><li>不明圆角（已经上报，希望不会收到没有答案就Close的邮件）</li><li>自己关注自己</li><li>评论没有马上出现</li></ol><h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><h4 id="1-AV与BV显示不统一"><a href="#1-AV与BV显示不统一" class="headerlink" title="1. AV与BV显示不统一"></a>1. AV与BV显示不统一</h4><p>DO YOU UNDERSTAND?</p><p>一个奇葩组合！</p><p>当然我不明白为什么要少搞一个”AV”上去？</p><h4 id="2-快进过度NB"><a href="#2-快进过度NB" class="headerlink" title="2. 快进过度NB"></a>2. 快进过度NB</h4><p>当你看视频到一半时，想快进</p><p>结果</p><p>马上视频**<u>END</u>**</p><p>这个不清楚云之幻怎么表态，不知道会不会改</p><h4 id="3-不明圆角"><a href="#3-不明圆角" class="headerlink" title="3. 不明圆角"></a>3. 不明圆角</h4><p>这个已经修复了，作者当时质疑我，后来才发现问题，这个问题真的只出现在第5个版本</p><h4 id="4-自己关注自己"><a href="#4-自己关注自己" class="headerlink" title="4.自己关注自己"></a>4.自己关注自己</h4><p>虽然没有什么用，最少要学学网页端的样子</p><h4 id="5-评论没有马上出现"><a href="#5-评论没有马上出现" class="headerlink" title="5.评论没有马上出现"></a>5.评论没有马上出现</h4><p>你发了一条评论，结果你找了半天都没有找的你发的评论，这个不太好吧。。。。。。</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>我只反馈了 3</p><p>这个博客发布的比较晚，发布时已经修复了（上面的日期只是创建日期罢了）</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>哔哩哔哩, UWP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>下载页初步完成搭设</title>
     <link href="/DownloadsPageIsOkNow/"/>
     <url>/DownloadsPageIsOkNow/</url>
@@ -151,9 +189,9 @@
     
     <tags>
       
-      <tag>Other</tag>
-      
       <tag>软件推荐</tag>
+      
+      <tag>Other</tag>
       
     </tags>
     

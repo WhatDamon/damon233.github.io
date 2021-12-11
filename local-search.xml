@@ -23,6 +23,25 @@
   
   
   <entry>
+    <title>为正式版Windows 11安装新Notepad（记事本）</title>
+    <link href="/NewNotepadInstall_W11S/"/>
+    <url>/NewNotepadInstall_W11S/</url>
+    
+    <content type="html"><![CDATA[<p>本文是基于上一篇文章修改而成的📕~</p><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前些时候，新版的记事本面向Dev渠道的Windows 11发布</p><p><img src="/img/ntphome.png"></p><p><img src="/img/ntpsetting.png"></p><p>然后这是官方的文章：</p><p><a href="https://blogs.windows.com/windows-insider/2021/12/07/redesigned-notepad-for-windows-11-begins-rolling-out-to-windows-insiders/">Redesigned Notepad for Windows 11 begins rolling out to Windows Insiders | Windows Insider Blog</a></p><p>但是，使用正式版的我不甘心，于是就有了这个教程</p><h1 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h1><p>1.1 打开<a href="https://store.rg-adguard.net/">https://store.rg-adguard.net/</a></p><p>1.2 把<strong>RP</strong>换成<strong>Fast</strong></p><p>1.3 输入<code>https://www.microsoft.com/store/productId/9MSMLRH6LZF3</code>并按下 勾</p><p><img src="/img/ntpdown.png"></p><p>（如果要用<strong>CategoryID</strong>，请输入<code>0cfabdcb-e35f-4ee5-8ca1-76660ea27185</code>）</p><p>1.4找到<code>Microsoft.WindowsNotepad_11.2110.64.0_neutral_~_8wekyb3d8bbwe.msixbundle</code></p><p>（千万不要用<code>Microsoft.WindowsNotepad_10.2103.12.0_neutral_~_8wekyb3d8bbwe.msixbundle</code>，除非你要恢复，偷懒用：11.2110.64.0版本安装包：<a href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/e71b4770-93c5-400e-9b1e-31e39ab67dec?P1=1639231406&P2=404&P3=2&P4=B/kCTDZKHVyCwazM8cgWpUHs+IUjel+uNJ1EY3nOTww7Hq0C6wqLM6z4CH7GGfG6mYkxjDvcO0wPak44oAJK2g==">下载</a>，要旧版的，10.2103.12.0版本：<a href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/2036b52d-f4fa-452c-867d-77a1dbb68b3c?P1=1639231305&P2=404&P3=2&P4=gksmOzl2IQaNSzhVkbSi5jUeBtDn8SmtGFGdpBEUYlIMXTTLIHuxyztLULszthDcAJ7uaXpyGyqAVUHjPpUyJg==">下载</a>）</p><p><img src="/img/ntplink.png"></p><p>1.5下载这个文件，但不要直接打开</p><p>2.1 使用例如7zip的解压缩软件打开包</p><p>2.2 找到<code>App_11.2110.34.0_x64.msix</code>包文件，并解压</p><p><img src="/img/ntpfile.png"></p><p>3.1 再解压文件夹中删除<strong>AppxBlockMap.xml、AppxSignature.p7x、[Content_Types].xml、AppxMetadata文件夹</strong></p><p>3.2 打开<strong>AppxManifest.xml</strong></p><p>3.3 替换13行为<code>&lt;TargetDeviceFamily Name=&quot;Windows.Desktop&quot; MinVersion=&quot;10.0.22000.0&quot; MaxVersionTested=&quot;10.0.22468.0&quot;/&gt;</code></p><p>4.1 打开<strong>开发者设置</strong>，并打开<strong>开发人员模式</strong></p><p><img src="/img/nmpset.png"></p><p>4.2 管理员方式打开<strong>Powershell</strong></p><p><img src="/img/nmppowershell.png"></p><p>4.3 在这里分别输入<code>Get-AppxPackage Microsoft.WindowsNotepad | Remove-AppxPackage -AllUsers</code></p><p>​                                   <code>Add-AppxPackage -Register &quot;(AppxManifest.xml的文件路径)&quot;</code></p><p>完成安装</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>Q:提示无法安装</p><p><strong>A:检查是否删除了相应文件，如果不行，请检查是否使用管理器权限，或者开发人员模式，也有可能是没有卸载掉旧版本</strong></p><p>Q:软件不正常</p><p><strong>A:可以重新安装一遍</strong></p><h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>虽然有中文，但我不知道怎么安装，如果你是英语渣，还是别用了，Dev渠道在Microsoft Store直接安装</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>升级到Windows 11后黑屏死机：WDF VIOLATION</title>
     <link href="/UpToWin11WithStopCode-WDF-VIOLATION/"/>
     <url>/UpToWin11WithStopCode-WDF-VIOLATION/</url>

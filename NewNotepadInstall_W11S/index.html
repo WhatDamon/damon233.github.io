@@ -18,7 +18,7 @@
   <meta name="author" content="What Damon">
   <meta name="keywords" content="damon233">
   
-  <title>升级到Windows 11后黑屏死机：WDF VIOLATION - What_Damon的窝</title>
+  <title>为正式版Windows 11安装新Notepad（记事本） - What_Damon的窝</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -170,12 +170,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/bsodwdfviolation.png') no-repeat center center;
+         style="background: url('/img/ntptitle.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="升级到Windows 11后黑屏死机：WDF VIOLATION">
+            <span class="h2" id="subtitle" title="为正式版Windows 11安装新Notepad（记事本）">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-10-05 21:39" pubdate>
-        2021年10月5日 晚上
+      <time datetime="2021-11-21 00:39" pubdate>
+        2021年11月21日 凌晨
       </time>
     </span>
   
@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      694 字
+      451 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      5
        分钟
     </span>
   
@@ -237,50 +237,43 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">升级到Windows 11后黑屏死机：WDF VIOLATION</h1>
+            <h1 style="display: none">为正式版Windows 11安装新Notepad（记事本）</h1>
             
             <div class="markdown-body">
-              <h1 id="Begin"><a href="#Begin" class="headerlink" title="Begin"></a>Begin</h1><p>10月5日，Windows 11正式发布，很多人都进行了更新，我也一样[doge]</p>
-<p>但是从不符合最低配置的设备更新，驱动上总会有那么点问题，我遇到了一个，错误代码为<strong>WDF VIOLATION</strong></p>
-<p><img src="/img/bsod-wdf.jpg" srcset="/img/loading.gif" lazyload></p>
-<p>死机后我进入了安全模式查了Dump，发现问题所在，网上对于这个问题的解决方法大多时惠普的，不够完整，这次我带来了两个，当然为了方便，惠普也会提到</p>
-<h1 id="BODY"><a href="#BODY" class="headerlink" title="BODY"></a>BODY</h1><h2 id="Mac电脑"><a href="#Mac电脑" class="headerlink" title="Mac电脑"></a>Mac电脑</h2><p>我就是用Mac的，这件事情整了我半天，现在告诉你哪里有问题</p>
-<p>先看看报告</p>
-<p><img src="/img/BSV-wdf.png" srcset="/img/loading.gif" lazyload></p>
-<p>会发现主要问题出在一个叫MacHALDriver.sys的驱动文件，还有ntoskrnl,exe和Wdf01000.sys都不是最重要的</p>
-<p>先说一下，MacHALDriver.sys是Bootcamp(启动助理)安装时释放的驱动程序，据我考证，Bootcamp 3.1就已经存在了，不够我还没有发现有什么用。。。</p>
-<p>好，开始教你如何解决</p>
-<ol>
-<li>关机</li>
-<li>启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li>
-<li>再次启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li>
-<li>继续启动，启动Windows RE(如果你<strong>启用了BitLocker</strong>，需要输入<strong>加密密钥</strong>)</li>
-<li><strong>不要点击重新启动</strong>，点击另外一个选项进入“选择一个选项”，然后依次点击“疑难解答”&gt;“高级选项”&gt;“命令提示符”</li>
-<li>输入<code>C:</code>，回车</li>
-<li>输入<code>cd c:\windows\system32\drivers</code>，回车</li>
-<li>输入<code>ren MacHALDriver.sys MacHALDriver.sys.bak</code>，回车</li>
-<li>输入<code>exit</code>，回车</li>
-</ol>
-<p>电脑重启后，问题应该修复了</p>
-<h2 id="惠普"><a href="#惠普" class="headerlink" title="惠普"></a>惠普</h2><p>我没有惠普电脑，但按照网上教程，大概是这样</p>
-<ol>
-<li>关机</li>
-<li>启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li>
-<li>再次启动，出现Windows标志(部分设备是OEM厂商标识)时，<strong>马上关闭电源</strong></li>
-<li>继续启动，启动Windows RE(如果你<strong>启用了BitLocker</strong>，需要输入<strong>加密密钥</strong>)</li>
-<li><strong>不要点击重新启动</strong>，点击另外一个选项进入“选择一个选项”，然后依次点击“疑难解答”&gt;“高级选项”&gt;“命令提示符”</li>
-<li>输入<code>C:</code>，回车</li>
-<li>输入<code>cd c:\windows\system32\drivers</code>，回车</li>
-<li>输入<code>ren HpqKbFiltr.sys HpqKbFiltr.sys.bak</code>，回车</li>
-<li>输入<code>exit</code>，回车</li>
-</ol>
-<h1 id="End"><a href="#End" class="headerlink" title="End"></a>End</h1><p>你这么一看，两者解决方法是不是很像</p>
-<p>其实就是把不支持的驱动给硬核禁用掉（改驱动名），当然不要再主系统尝试，权限不够的！</p>
-<p>以上操作也可以再Windows PE中实现，其实就是改改名嘛，安全模式还没有试过</p>
-<hr>
-<p><strong>相关链接：</strong></p>
-<p><a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/sbs/windows/%E8%A7%A3%E5%86%B3%E8%93%9D%E5%B1%8F%E9%94%99%E8%AF%AF-5c62726c-6489-52da-a372-3f73142c14ad?ui=zh-CN&rs=zh-CN&ad=CN">蓝屏错误疑难解答 (microsoft.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/fd8044fa0bf3085030137a79.html">WDF VIOLATION 你的电脑遇到问题，需要重新启动-百度经验 (baidu.com)</a></p>
+              <p>本文是基于上一篇文章修改而成的📕~</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前些时候，新版的记事本面向Dev渠道的Windows 11发布</p>
+<p><img src="/img/ntphome.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/ntpsetting.png" srcset="/img/loading.gif" lazyload></p>
+<p>然后这是官方的文章：</p>
+<p><a target="_blank" rel="noopener" href="https://blogs.windows.com/windows-insider/2021/12/07/redesigned-notepad-for-windows-11-begins-rolling-out-to-windows-insiders/">Redesigned Notepad for Windows 11 begins rolling out to Windows Insiders | Windows Insider Blog</a></p>
+<p>但是，使用正式版的我不甘心，于是就有了这个教程</p>
+<h1 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h1><p>1.1 打开<a target="_blank" rel="noopener" href="https://store.rg-adguard.net/">https://store.rg-adguard.net/</a></p>
+<p>1.2 把<strong>RP</strong>换成<strong>Fast</strong></p>
+<p>1.3 输入<code>https://www.microsoft.com/store/productId/9MSMLRH6LZF3</code>并按下 勾</p>
+<p><img src="/img/ntpdown.png" srcset="/img/loading.gif" lazyload></p>
+<p>（如果要用<strong>CategoryID</strong>，请输入<code>0cfabdcb-e35f-4ee5-8ca1-76660ea27185</code>）</p>
+<p>1.4找到<code>Microsoft.WindowsNotepad_11.2110.64.0_neutral_~_8wekyb3d8bbwe.msixbundle</code></p>
+<p>（千万不要用<code>Microsoft.WindowsNotepad_10.2103.12.0_neutral_~_8wekyb3d8bbwe.msixbundle</code>，除非你要恢复，偷懒用：11.2110.64.0版本安装包：<a target="_blank" rel="noopener" href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/e71b4770-93c5-400e-9b1e-31e39ab67dec?P1=1639231406&P2=404&P3=2&P4=B/kCTDZKHVyCwazM8cgWpUHs+IUjel+uNJ1EY3nOTww7Hq0C6wqLM6z4CH7GGfG6mYkxjDvcO0wPak44oAJK2g==">下载</a>，要旧版的，10.2103.12.0版本：<a target="_blank" rel="noopener" href="http://tlu.dl.delivery.mp.microsoft.com/filestreamingservice/files/2036b52d-f4fa-452c-867d-77a1dbb68b3c?P1=1639231305&P2=404&P3=2&P4=gksmOzl2IQaNSzhVkbSi5jUeBtDn8SmtGFGdpBEUYlIMXTTLIHuxyztLULszthDcAJ7uaXpyGyqAVUHjPpUyJg==">下载</a>）</p>
+<p><img src="/img/ntplink.png" srcset="/img/loading.gif" lazyload></p>
+<p>1.5下载这个文件，但不要直接打开</p>
+<p>2.1 使用例如7zip的解压缩软件打开包</p>
+<p>2.2 找到<code>App_11.2110.34.0_x64.msix</code>包文件，并解压</p>
+<p><img src="/img/ntpfile.png" srcset="/img/loading.gif" lazyload></p>
+<p>3.1 再解压文件夹中删除<strong>AppxBlockMap.xml、AppxSignature.p7x、[Content_Types].xml、AppxMetadata文件夹</strong></p>
+<p>3.2 打开<strong>AppxManifest.xml</strong></p>
+<p>3.3 替换13行为<code>&lt;TargetDeviceFamily Name=&quot;Windows.Desktop&quot; MinVersion=&quot;10.0.22000.0&quot; MaxVersionTested=&quot;10.0.22468.0&quot;/&gt;</code></p>
+<p>4.1 打开<strong>开发者设置</strong>，并打开<strong>开发人员模式</strong></p>
+<p><img src="/img/nmpset.png" srcset="/img/loading.gif" lazyload></p>
+<p>4.2 管理员方式打开<strong>Powershell</strong></p>
+<p><img src="/img/nmppowershell.png" srcset="/img/loading.gif" lazyload></p>
+<p>4.3 在这里分别输入<code>Get-AppxPackage Microsoft.WindowsNotepad | Remove-AppxPackage -AllUsers</code></p>
+<p>​                                   <code>Add-AppxPackage -Register &quot;(AppxManifest.xml的文件路径)&quot;</code></p>
+<p>完成安装</p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>Q:提示无法安装</p>
+<p><strong>A:检查是否删除了相应文件，如果不行，请检查是否使用管理器权限，或者开发人员模式，也有可能是没有卸载掉旧版本</strong></p>
+<p>Q:软件不正常</p>
+<p><strong>A:可以重新安装一遍</strong></p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>虽然有中文，但我不知道怎么安装，如果你是英语渣，还是别用了，Dev渠道在Microsoft Store直接安装</p>
 
             </div>
             <hr>
@@ -308,9 +301,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/NewNotepadInstall_W11S/">
+                      <a href="/NewMediaPlayerInstall_W11S/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">为正式版Windows 11安装新Notepad（记事本）</span>
+                        <span class="hidden-mobile">为正式版Windows 11安装新Media Player</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -318,8 +311,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/BiliProblems/">
-                        <span class="hidden-mobile">史上最强哔哩哔哩客户端的问题</span>
+                      <a href="/UpToWin11WithStopCode-WDF-VIOLATION/">
+                        <span class="hidden-mobile">升级到Windows 11后黑屏死机：WDF VIOLATION</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

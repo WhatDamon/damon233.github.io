@@ -149,6 +149,18 @@
           
           
             <li class="nav-item">
+              <a class="nav-link" href="/Will_to_do/">
+                <i class="iconfont icon-plan"></i>
+                策划
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
               <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
                 友链
@@ -271,6 +283,12 @@
                 
               </div>
               
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！如果被我抓到了没有写明出处者，将进行举报处理
+                  
+                </p>
+              
               
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
@@ -291,6 +309,33 @@
               
             </div>
 
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"00fd5b9e1d955da3d18a","clientSecret":"c9b19f44cd37f196511a1050851b9635ea4361ad","repo":"whatdamon.github.io","owner":"WhatDamon","admin":"WhatDamon","language":"zh-CN","labels":"Gitalk","perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '973a94c574821a669b555679184c3810'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
             
           </article>
         </div>

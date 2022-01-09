@@ -321,7 +321,7 @@
     Fluid.utils.loadComments('#waline', function() {
       Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@waline/client@0.16.2/dist/Waline.min.js', function() {
         var options = Object.assign(
-          {"serverURL":"https://whatdamon-blog-comment-qiphcg922-whatdamon.vercel.app/","path":"window.location.pathname","placeholder":"发条友善的评论","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","avatar":"retro","avatarCDN":"","avatarForce":false,"wordLimit":0,"pageSize":10,"highlight":true,"requiredFields":[],"emojiCDN":null,"emojiMaps":null,"anonymous":null},
+          {"serverURL":"https://whatdamon-blog-comment-qiphcg922-whatdamon.vercel.app/","path":"window.location.pathname","placeholder":"发条友善的评论","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","avatar":"retro","avatarCDN":"mp","avatarForce":false,"wordLimit":0,"pageSize":10,"highlight":true,"requiredFields":[],"emojiCDN":null,"emojiMaps":null,"anonymous":null},
           {
             el: '#waline',
             path: window.location.pathname
@@ -395,9 +395,33 @@
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>万恶的 Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>更加万恶的 Fluid (bushi</span></a> 
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>万恶的 Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>更加万恶的 Fluid (bushi</span></a> <br />Copyright What_Damon 2020, 2021, 2022 
   </div>
   
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
 
   
 
@@ -455,6 +479,8 @@
   
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

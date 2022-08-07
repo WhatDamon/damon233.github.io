@@ -28,6 +28,9 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Serif+SC&display=swap" rel="stylesheet">
   
   <title>What_Damon的窝</title>
@@ -36,9 +39,12 @@
 
 
 
-<!-- 主题依赖的图标库，不要自行修改 -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
 
 
 
@@ -47,21 +53,42 @@
 
 <link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"whatdamon.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#7E5BAA","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":"c5b66001ff9a759cab54e7d2b027c53e","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"whatdamon.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#7E5BAA","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":"c5b66001ff9a759cab54e7d2b027c53e","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
 </head>
 
 
 <body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
       <strong>What_Damon的窝</strong>
@@ -167,6 +194,7 @@
               &nbsp;<i class="iconfont icon-search"></i>&nbsp;
             </a>
           </li>
+          
         
         
           <li class="nav-item" id="color-toggle-btn">
@@ -179,34 +207,40 @@
   </div>
 </nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Dev NOW!!(bushi">
-              
-            </span>
+  
 
-            
-          </div>
-
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
+            <span id="subtitle" data-typed-text="Dev NOW!!(bushi"></span>
           
         </div>
+
+        
       </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
+  </div>
+</div>
+
+</div>
+
   </header>
 
   <main>
     
       <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
+        <div id="board"
+          style="margin-top: 0">
           
           <div class="container">
             <div class="row">
@@ -231,12 +265,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/bxmbandizipshi2apptj-1/" target="_self">
-          
+      
+      <a class="index-excerpt " href="/bxmbandizipshi2apptj-1/" target="_self">
+        <div>
           1. Peazip这款压缩软件我体验过一段时间，免费开源，非常清爽，另外，它非常配Windows 10的UI，外观的自定义型很强（但比WinRAR要弱一丢丢丢丢……丢丢丢丢丢丢丢）先上张官网宣传图吧（不自己截是因为👴已经把它卸载啦）诶？！英文？看不懂？这款软件是完全支持简体中文哒！因为这是一个国外的软件！你要的 官网Yeah~~~ 2. 360 Zip不是内个国内版的，是国际版的内个功能和Ban
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -252,7 +286,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">软件推荐</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">#软件推荐</a>
             
           </div>
         
@@ -277,12 +311,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/yxhscqbdtool/" target="_self">
-          
+      
+      <a class="index-excerpt " href="/yxhscqbdtool/" target="_self">
+        <div>
           额。。。这段时间营销号生成器可出了名，但这只是一个网站，在无网环境压根无法体验，使用，我做了一个Windows本地版的，甚至可以在Windows 98使用哟🙃先上张GIF图片在这里下载源码：https:&#x2F;&#x2F;lanzous.com&#x2F;ibi4szg
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -298,9 +332,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/">易语言</a>
+              <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/">#易语言</a>
             
-              <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a>
+              <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">#小工具</a>
             
           </div>
         
@@ -325,12 +359,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/aboutpandownloadgb/" target="_self">
-          
+      
+      <a class="index-excerpt " href="/aboutpandownloadgb/" target="_self">
+        <div>
           主这段时间，PanDownload开发者被捕，目前pandownload的所有网站http:&#x2F;&#x2F;www.pandownload.comhttp:&#x2F;&#x2F;www.baiduwp.com还有有一个安卓端网站全部下线PanDownload的确是一款优秀的软件，它给许多用户带来放便利，而PanDownload开发者被捕，软件停用，无疑是给用户重大的打击具体为什么现在大家开始投靠百度网盘第三方客户端，最主要百度
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -346,9 +380,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">软件推荐</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">#软件推荐</a>
             
-              <a href="/tags/Other/">Other</a>
+              <a href="/tags/Other/">#Other</a>
             
           </div>
         
@@ -373,12 +407,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/cleanerapptj-1/" target="_self">
-          
+      
+      <a class="index-excerpt " href="/cleanerapptj-1/" target="_self">
+        <div>
           1. CCleaner不用我多说，它可以清理跟踪器、注册表、缓存文件等等等等，还可以自定义选择，当然，它还可以完全卸载顽固软件，升级国外的软件当然问题很明显，不付费很多功能没法用，但基本上够用了，如果使用了Professional版，关闭浏览器会弹出一个很烦人的小窗口，如果你使用断网破解方式，等个几天，会是不是弹出许可证到期通知，但事实上并非如此，另外清理一次产生缓存也有500MB。。。直接上官网
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -394,7 +428,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">软件推荐</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">#软件推荐</a>
             
           </div>
         
@@ -419,12 +453,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/xiaxianfkdaos/" target="_self">
-          
+      
+      <a class="index-excerpt " href="/xiaxianfkdaos/" target="_self">
+        <div>
           由于凡科建站的重重限制，以及不能搞一个好记的域名，迫使我下线该站，再次我深感歉意，将来的所有信息将迁至该站和上线了博客一样，网站将会于2020年5月1日至8月1日下线我曾经做的网站客户端的项目也将会取消Thank！
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -440,7 +474,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Other/">Other</a>
+              <a href="/tags/Other/">#Other</a>
             
           </div>
         
@@ -465,12 +499,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/AppTJ-1/" target="_self">
-          
+      
+      <a class="index-excerpt " href="/AppTJ-1/" target="_self">
+        <div>
           1. 7zip - 压缩软件优点：轻量级压缩软件，压缩率炒鸡高，解压速度也很快，兼容性也很强，Alpha版本都很稳定缺点：UI太Low，小白不建议上手，图标总感觉回到了Windows 2000时代。。。下载链接：https:&#x2F;&#x2F;www.7-zip.org&#x2F; 2. Edge Chromium - 浏览器不是你电脑的那个，是基于Chromium的那个(Windows 10 20H2以上版本预装预装)优
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -486,7 +520,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">软件推荐</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">#软件推荐</a>
             
           </div>
         
@@ -511,12 +545,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/sxlblogxiaxian/" target="_self">
-          
+      
+      <a class="index-excerpt " href="/sxlblogxiaxian/" target="_self">
+        <div>
           由于上线了二级域名限制，部分改动审核不会通过，加上我只是一个没钱的学生党，没钱买上线了支持的域名我已经搬到这里了我将会在2020年5月1日-8月1日内随缘进行网站下线当然现在还能再去看看这个即将下线的博客链接：damon233.mysxl.cn我不会将那些博文搬运回来了
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -532,7 +566,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Other/">Other</a>
+              <a href="/tags/Other/">#Other</a>
             
           </div>
         
@@ -577,56 +611,58 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
     </div>
   </div>
 </div>
+
     
 
     
   </main>
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>万恶的 Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>更加万恶的 Fluid (bushi</span></a> <br />Copyright What_Damon 2020, 2021, 2022 
-  </div>
+  <footer>
+    <div class="footer-inner">
   
-  <div class="statistics">
-    
-    
-
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            总访客数 
-            <span id="busuanzi_value_site_uv"></span>
-             人
-          </span>
-      
-    
-  </div>
-
-
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>万恶的 Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>更加万恶的 Fluid (bushi</span></a> <br />Copyright What_Damon 2020, 2021, 2022 
+    </div>
+  
+  
+    <div class="statistics">
+  
   
 
   
-</footer>
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
 
+  
+  
+  
+</div>
 
-  <!-- SCRIPTS -->
+  </footer>
+
+  <!-- Scripts -->
   
   <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
@@ -645,10 +681,22 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-<!-- Plugins -->
 
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
 
-  <script  src="/js/local-search.js" ></script>
 
 
 
@@ -658,45 +706,24 @@
 
 
 
-  
 
-
-
-
+  <script  src="/js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-        typing(title);
-      
-    })(window, document);
-  </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
 <script  src="/js/boot.js" ></script>
 
 
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

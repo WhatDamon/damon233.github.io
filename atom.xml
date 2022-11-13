@@ -6,7 +6,7 @@
   <link href="http://whatdamon.github.io/atom.xml" rel="self"/>
   
   <link href="http://whatdamon.github.io/"/>
-  <updated>2022-11-13T02:35:46.617Z</updated>
+  <updated>2022-11-13T06:16:23.856Z</updated>
   <id>http://whatdamon.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://whatdamon.github.io/pleaseWaitForVBox7/"/>
     <id>http://whatdamon.github.io/pleaseWaitForVBox7/</id>
     <published>2022-11-13T01:39:23.000Z</published>
-    <updated>2022-11-13T02:35:46.617Z</updated>
+    <updated>2022-11-13T06:16:23.856Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="先说定论，不推荐！"><a href="#先说定论，不推荐！" class="headerlink" title="先说定论，不推荐！"></a>先说定论，<font color=red>不推荐！</font></h4><p>现在，我需要告诉你Virtual Box 7.0相比6.0有哪些进步，哪些退步，以帮助你选择是否更新！</p><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol><li><p>到了7.0，2.5k屏的显示效果大幅度缩水，字体于按钮得巨大</p><p>啥也不说了，看张图更加直观…</p><p><img src="/img/vboxcomparewindow.png"></p></li><li><p>插图开始缝合，出现了扁平和渐变杂糅乱象</p></li><li><p>新建UI大幅缩水，看起来更加粗糙</p></li><li><p>中文翻译不全，严重影响体验</p></li><li><p>虚拟机启动效率变慢，每次启动你都要等最少15秒</p></li><li><p>设计上颜色总体偏灰，感觉看起来更脏</p></li></ol><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol><li><p>暗色模式（终于有了！！！！！！</p></li><li><p>虚拟机TPM配置（谢谢你啊</p></li><li><p>DirectX 11的3D加速</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h4 id="先说定论，不推荐！"><a href="#先说定论，不推荐！" class="headerlink" title="先说定论，不推荐！"></a>先说定论，<font color=red>不推荐！</font></h4><p>现在，我需要告诉你Virtual Box 7.0相比6.0有哪些进步，哪些退步，以帮助你选择是否更新！</p><p>这次我不说废话，晒图自己看吧。。。</p><p>当然，如果你升级了，那么除了卸载重装VBox，都无法回到6.0</p><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol><li><p>到了7.0，2.5k屏的显示效果大幅度缩水，字体于按钮得巨大</p><p><img src="/img/vboxcomparewindow.png" alt="组件真的太大了!"></p></li><li><p>插图开始缝合，出现了扁平和渐变杂糅乱象</p><p><img src="/img/vboxshitabout.png" alt="图标字体还是早期风格，但是文本图标已经是甲骨文风了"></p><p><img src="/img/vboxlaunch.png" alt="虚拟机启动界面"></p></li><li><p>新建虚拟机UI大幅缩水，看起来更加粗糙</p><p> <img src="/img/vboxnewvm.png" alt="变丑的新建虚拟机"></p></li><li><p>中文翻译不全，严重影响体验</p><p><img src="/img/vboxtranproblem.png" alt="Quit都没有翻译了"></p><p><img src="/img/vboxtranproblem1.png" alt="害!!!!"></p></li><li><p>虚拟机启动效率变慢，每次启动你都要等最少15秒</p><p> <img src="/img/vboxslowlaunch.gif" alt="好好感受一下吧"></p></li><li><p>设计上颜色总体偏灰，感觉看起来更脏</p></li></ol><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol><li><p>暗色模式（终于有了！！！！！！</p><p><img src="/img/vboxdarkchoice.png" alt="暗色模式选项"></p><p><img src="/img/vboxdark.png" alt="暗色模式效果"></p></li><li><p>虚拟机TPM配置（谢谢你啊</p><p> <img src="/img/vboxtpm.png" alt="TPM配置"></p></li><li><p>DirectX 11的3D加速</p><p> <img src="/img/vboxchangelogdx.png" alt="DirectX 11 3D加速的更新日志"></p></li></ol>]]></content>
     
     
       

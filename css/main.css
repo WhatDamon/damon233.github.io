@@ -473,7 +473,7 @@ sup > a::before,
   .navbar .dropdown-collapse,
   .top-nav-collapse,
   .navbar-col-show {
-    background: rgba(110,0,247,0.7);
+    background: rgba(110,0,247,0.8);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
   }
@@ -819,7 +819,7 @@ html {
 html,
 body {
   height: 100%;
-  font-family: /font/Sans.otf;
+  font-family: HarmonyOS Sans;
   overflow-wrap: break-word;
 }
 body {
@@ -936,7 +936,7 @@ i.iconfont {
     :root:not([data-user-color-scheme]) .navbar .dropdown-collapse,
     :root:not([data-user-color-scheme]) .top-nav-collapse,
     :root:not([data-user-color-scheme]) .navbar-col-show {
-      background: rgba(53,10,106,0.7);
+      background: rgba(53,10,106,0.8);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
@@ -987,7 +987,7 @@ i.iconfont {
   [data-user-color-scheme="dark"] .navbar .dropdown-collapse,
   [data-user-color-scheme="dark"] .top-nav-collapse,
   [data-user-color-scheme="dark"] .navbar-col-show {
-    background: rgba(53,10,106,0.7);
+    background: rgba(53,10,106,0.8);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
   }
@@ -1364,7 +1364,7 @@ i.iconfont {
   .navbar .dropdown-collapse,
   .top-nav-collapse,
   .navbar-col-show {
-    background: rgba(110,0,247,0.7);
+    background: rgba(110,0,247,0.8);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
   }
@@ -1388,7 +1388,7 @@ label {
 .markdown-body {
   font-size: 1rem;
   line-height: 1.6;
-  font-family: /font/Sans.otf;
+  font-family: HarmonyOS Sans;
   margin-bottom: 2rem;
   color: var(--post-text-color);
 }
@@ -1969,7 +1969,7 @@ figure.highlight td.code > pre {
 .markdown-body {
   font-size: 1rem;
   line-height: 1.6;
-  font-family: /font/Sans.otf;
+  font-family: HarmonyOS Sans;
   margin-bottom: 2rem;
   color: var(--post-text-color);
 }

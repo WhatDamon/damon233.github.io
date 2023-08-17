@@ -65,7 +65,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"whatdamon.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#7E5BAA","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"whatdamon.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#7E5BAA","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -112,7 +112,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -124,7 +124,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -136,7 +136,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -148,7 +148,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/downloads/">
                 <i class="iconfont icon-book"></i>
-                下载
+                <span>下载</span>
               </a>
             </li>
           
@@ -160,7 +160,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/rss/">
                 <i class="iconfont icon-rss"></i>
-                RSS
+                <span>RSS</span>
               </a>
             </li>
           
@@ -172,7 +172,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -184,7 +184,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -196,7 +196,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/museum/">
                 <i class="iconfont icon-bookmark-fill"></i>
-                博物馆
+                <span>博物馆</span>
               </a>
             </li>
           
@@ -204,15 +204,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -265,66 +266,18 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/BiliProblems/" target="_self">
-          <img src="/img/BiliProblems.png" srcset="/img/loading.gif" lazyload alt="史上最强哔哩哔哩客户端的问题">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/BiliProblems/" target="_self">
-          史上最强哔哩哔哩客户端的问题
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/BiliProblems/" target="_self">
-        <div>
-          哔哩项目本质上是开发者云之幻拿来练手的项目，现在哔哩已经进入随缘更新阶段，体验肯定越来越差，请移步B站官方客户端！   注这些问题皆来自开源后的**第5个版本，来自GITHUB的已编译**版本不确定在后面版本是否会出现 问题概览 AV与BV显示不统一 快进过度NB 不明圆角（已经上报，希望不会收到没有答案就Close的邮件） 自己关注自己 评论没有马上出现  详细1. AV与BV显示不统一DO
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-24 23:24" pubdate>
-              2021-09-24
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/">#哔哩哔哩</a>
-            
-              <a href="/tags/UWP/">#UWP</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/DownloadsPageIsOkNow/" target="_self">
           <img src="/img/DownloadOK.png" srcset="/img/loading.gif" lazyload alt="下载页初步完成搭设">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/DownloadsPageIsOkNow/" target="_self">
           下载页初步完成搭设
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/DownloadsPageIsOkNow/" target="_self">
@@ -365,12 +318,12 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/lanzou-share-error/" target="_self">
           蓝奏云链接无法访问？不存在的！
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/lanzou-share-error/" target="_self">
@@ -411,12 +364,12 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/To-Hexo/" target="_self">
           转移Hexo
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/To-Hexo/" target="_self">
@@ -457,12 +410,12 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/damonos2no/" target="_self">
           诶诶，怎么没人要看Damon OS 2.0的主要内容啊？
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/damonos2no/" target="_self">
@@ -505,12 +458,12 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/bxmbandizipshi2apptj-1/" target="_self">
           不想花钱买新版Bandizip，试试这两款压缩软件
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/bxmbandizipshi2apptj-1/" target="_self">
@@ -551,17 +504,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/yxhscqbdtool/" target="_self">
           营销号生成器 - 本地版
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/yxhscqbdtool/" target="_self">
         <div>
-          额。。。这段时间营销号生成器可出了名，但这只是一个网站，在无网环境压根无法体验，使用，我做了一个Windows本地版的，甚至可以在Windows 98使用哟🙃先上张GIF图片在这里下载源码：https:&#x2F;&#x2F;lanzous.com&#x2F;ibi4szg
+          额。。。这段时间营销号生成器可出了名，但这只是一个网站，在无网环境压根无法体验，使用，我做了一个Windows本地版的，甚至可以在Windows 98使用哟🙃先上张GIF图片在这里下载源码：https://lanzous.com/ibi4szg
         </div>
       </a>
 
@@ -582,6 +535,54 @@
               <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/">#易语言</a>
             
               <a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">#小工具</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/aboutpandownloadgb/" target="_self">
+          <img src="/img/pandown.jpg" srcset="/img/loading.gif" lazyload alt="关于PanDownload事件">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/aboutpandownloadgb/" target="_self">
+          关于PanDownload事件
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/aboutpandownloadgb/" target="_self">
+        <div>
+          主这段时间，PanDownload开发者被捕，目前pandownload的所有网站http://www.pandownload.comhttp://www.baiduwp.com还有有一个安卓端网站全部下线PanDownload的确是一款优秀的软件，它给许多用户带来放便利，而PanDownload开发者被捕，软件停用，无疑是给用户重大的打击具体为什么现在大家开始投靠百度网盘第三方客户端，最主要百度
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-04-16 13:31" pubdate>
+              2020-04-16
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">#软件推荐</a>
+            
+              <a href="/tags/Other/">#Other</a>
             
           </div>
         

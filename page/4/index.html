@@ -65,7 +65,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"whatdamon.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#7E5BAA","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"whatdamon.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#7E5BAA","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -112,7 +112,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -124,7 +124,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -136,7 +136,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -148,7 +148,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/downloads/">
                 <i class="iconfont icon-book"></i>
-                下载
+                <span>下载</span>
               </a>
             </li>
           
@@ -160,7 +160,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/rss/">
                 <i class="iconfont icon-rss"></i>
-                RSS
+                <span>RSS</span>
               </a>
             </li>
           
@@ -172,7 +172,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -184,7 +184,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -196,7 +196,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/museum/">
                 <i class="iconfont icon-bookmark-fill"></i>
-                博物馆
+                <span>博物馆</span>
               </a>
             </li>
           
@@ -204,15 +204,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -265,66 +266,18 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/aboutpandownloadgb/" target="_self">
-          <img src="/img/pandown.jpg" srcset="/img/loading.gif" lazyload alt="关于PanDownload事件">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/aboutpandownloadgb/" target="_self">
-          关于PanDownload事件
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/aboutpandownloadgb/" target="_self">
-        <div>
-          主这段时间，PanDownload开发者被捕，目前pandownload的所有网站http:&#x2F;&#x2F;www.pandownload.comhttp:&#x2F;&#x2F;www.baiduwp.com还有有一个安卓端网站全部下线PanDownload的确是一款优秀的软件，它给许多用户带来放便利，而PanDownload开发者被捕，软件停用，无疑是给用户重大的打击具体为什么现在大家开始投靠百度网盘第三方客户端，最主要百度
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-04-16 13:31" pubdate>
-              2020-04-16
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">#软件推荐</a>
-            
-              <a href="/tags/Other/">#Other</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/cleanerapptj-1/" target="_self">
           <img src="/img/cleanerapptj-1.png" srcset="/img/loading.gif" lazyload alt="推荐两款优秀的系统清理软件">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/cleanerapptj-1/" target="_self">
           推荐两款优秀的系统清理软件
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/cleanerapptj-1/" target="_self">
@@ -365,12 +318,12 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/xiaxianfkdaos/" target="_self">
           即将关闭我的凡科Damon OS官网
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/xiaxianfkdaos/" target="_self">
@@ -411,17 +364,17 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/AppTJ-1/" target="_self">
           推荐一下优秀的软件
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/AppTJ-1/" target="_self">
         <div>
-          1. 7zip - 压缩软件优点：轻量级压缩软件，压缩率炒鸡高，解压速度也很快，兼容性也很强，Alpha版本都很稳定缺点：UI太Low，小白不建议上手，图标总感觉回到了Windows 2000时代。。。下载链接：https:&#x2F;&#x2F;www.7-zip.org&#x2F; 2. Edge Chromium - 浏览器不是你电脑的那个，是基于Chromium的那个(Windows 10 20H2以上版本预装预装)优
+          1. 7zip - 压缩软件优点：轻量级压缩软件，压缩率炒鸡高，解压速度也很快，兼容性也很强，Alpha版本都很稳定缺点：UI太Low，小白不建议上手，图标总感觉回到了Windows 2000时代。。。下载链接：https://www.7-zip.org/ 2. Edge Chromium - 浏览器不是你电脑的那个，是基于Chromium的那个(Windows 10 20H2以上版本预装预装)优
         </div>
       </a>
 
@@ -457,12 +410,12 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/sxlblogxiaxian/" target="_self">
           即将关闭我的上线了博客
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt " href="/sxlblogxiaxian/" target="_self">
@@ -476,6 +429,52 @@
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
             <time datetime="2020-04-14 22:22" pubdate>
+              2020-04-14
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Other/">#Other</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/welcome/" target="_self">
+          <img src="/img/welcome.png" srcset="/img/loading.gif" lazyload alt="欢迎！！！！！">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/welcome/" target="_self">
+          欢迎！！！！！
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/welcome/" target="_self">
+        <div>
+          这里是What_Damon的Blog博客哟~~~~肥肠欢迎来到我滴博客😜请尽情滴浏览呀😉 本站须知评论使用： 严禁发布带有色情、黄色、恐怖、低俗、暴力等内容的评论 严禁狂刷评论，影响网站访问和评论系统的正常访问 禁止发布举报为标明出处的文章，请单独邮箱（&#x77;&#104;&#97;&#x74;&#100;&#x61;&#x6d;&#x6f;&#110;&#x40;&#49;&#54;&#
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-04-14 22:08" pubdate>
               2020-04-14
             </time>
           </div>

@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://whatdamon.github.io/img/winxp.jpg">
 <meta property="article:published_time" content="2022-04-10T23:50:13.000Z">
-<meta property="article:modified_time" content="2022-05-02T16:22:16.000Z">
+<meta property="article:modified_time" content="2023-08-17T18:56:10.213Z">
 <meta property="article:author" content="What Damon">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary_large_image">
@@ -75,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"whatdamon.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#7E5BAA","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"whatdamon.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":60,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#7E5BAA","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -122,7 +122,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -134,7 +134,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -146,7 +146,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -158,7 +158,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/downloads/">
                 <i class="iconfont icon-book"></i>
-                下载
+                <span>下载</span>
               </a>
             </li>
           
@@ -170,7 +170,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/rss/">
                 <i class="iconfont icon-rss"></i>
-                RSS
+                <span>RSS</span>
               </a>
             </li>
           
@@ -182,7 +182,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -194,7 +194,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -206,7 +206,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/museum/">
                 <i class="iconfont icon-bookmark-fill"></i>
-                博物馆
+                <span>博物馆</span>
               </a>
             </li>
           
@@ -214,15 +214,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -263,7 +264,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.2k 字er
+          1.3k 字er
         
       </span>
     
@@ -275,7 +276,7 @@
         
         
           <!-- compatible with older versions-->
-          About 11 Minutes
+          About 12 Minutes
         
       </span>
     
@@ -312,14 +313,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">关于Windows XP源码泄露</h1>
+            <h1 id="seo-header">关于Windows XP源码泄露</h1>
             
               <p class="note note-info">
                 
                   
                     <!-- compatible with older versions-->
-                    最后更新于：1 年前
+                    最后更新于：18 分钟前
                   
                 
               </p>
@@ -342,22 +342,23 @@
 <h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">magnet:?<span class="hljs-attribute">xt</span>=urn:btih:3D8B16242B56A3AAFB8DA7B5FC83EF993EBCF35B<br></code></pre></td></tr></table></figure>
 
 <p>*建议拿迅雷下载，速度快点</p>
-<p><img src="/img/msleakthings.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/img/msleakthings.png" srcset="/img/loading.gif" lazyload alt="泄露的文件"></p>
 <h2 id="个人试玩"><a href="#个人试玩" class="headerlink" title="个人试玩"></a>个人试玩</h2><p>不会吧不会吧，不会真的有人有现成镜像还要自己编译？！😅</p>
 <p>好吧，其实火绒在我解压源码时疯狂报毒，几个编译源码需要文件全部去世</p>
 <p><img src="/img/hrtowinxp.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <h2 id="国产系统？"><a href="#国产系统？" class="headerlink" title="国产系统？"></a>国产系统？</h2><p>当我逛知乎，偶然间让我发现迷幻的评论！</p>
+<p>他们觉得国产系统可以复制里面的代码来完善现在的国产系统</p>
 <p>就…………分享下我对这些评论的观点？！</p>
 <p>Microsoft® Windows®是闭源商业软件，微软拥有其版权，微软也拥有其专利，源码不可以商业使用，不然是违法行为，只可以用于学习用途，当时高校在研究Windows源码时，很多学生都说Windows源码写得很漂亮，很有参考意义</p>
-<p>当然我也发现这些人的出发点是好的，打破美帝垄断，实际上Linux就已经可以做到了，但是国内软件开发商不争气，Linux的国内生态非常差，Windows反而到处都是软件，虽然Linux可以使用Wine运行，但又缩水：兼容性差</p>
+<p>当然我也发现这些人的出发点是好的，打破美帝垄断，实际上Linux就已经可以做到了，但是国内软件开发商不争气，Linux的国内生态非常差，Windows反而到处都是软件，虽然Linux可以使用Wine运行，但又缩水：兼容性差，另外，国产Linux通常都不会遵守GPL开放系统源代码</p>
 <p>说到这里，我想到Wine通过参考这些源码提高系统兼容性哦🙂~yee</p>
 <p>此外我怀疑到时候搞得不好就会出现一个基于Windows XP源码开发的国产系统（希望永远不会发生</p>
 <p>此外我还发现有很多人希望源码集成到鸿蒙，开发鸿蒙PC版？！</p>
-<p>我只想说啊：没~有那么简单，*&amp;#<em>%&amp;%@&amp;%&amp;</em></p>
+<p>我只想说啊：小伙子，我看你骨骼精奇，要不到狱里面喝喝茶，住个一段时间，体验一下豪华待遇（包吃包住）</p>
 <h2 id="React-OS的痛"><a href="#React-OS的痛" class="headerlink" title="React OS的痛"></a>React OS的痛</h2><p>现在Windows XP（或者Server 2003）源码泄露，React OS正好是NT 5.2（64为XP，Server 2003内核），现在他们必须证明自己的清白（不是复制Windows源码），必须要服从微软对React OS源码的检查，害~</p>
-<h2 id="告Windows-XP用户"><a href="#告Windows-XP用户" class="headerlink" title="告Windows XP用户"></a>告Windows XP用户</h2><p>升级系统吧，现在Windows 7都比Windows XP安全好多，最好是上Windows 10的最新版本（老版本不是特别安全，并且还有特别多BUG），如果愿意还可以上Windows 11，Windows XP现在已经是世界上漏洞最多的系统了，黑帽黑客可以通过这些源码找到系统漏洞，从而攻击个人或者企业电脑，特别是ZF电脑，，，</p>
-<p>部分漏洞可是安全软件都救不了的啊！</p>
-<p><img src="/img/114514.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="告Windows-XP用户"><a href="#告Windows-XP用户" class="headerlink" title="告Windows XP用户"></a>告Windows XP用户</h2><p>我还是劝坚持Windows XP的用户升级系统吧，现在的Windows 7都比Windows XP安全好多（即便延长支持已经结束），最好是上Windows 10的最新版本（老版本不是特别安全，并且还有特别多BUG），如果愿意还可以上Windows 11，Windows XP现在已经是世界上漏洞最多的系统了，黑帽黑客可以通过这些源码找到系统漏洞，从而攻击个人或者企业电脑，特别是ZF电脑（断网电脑也别掉以轻心，毕竟有人论证过断网也可以黑电脑），，，</p>
+<p>要知道，部分系统底层级别的漏洞可是安全软件都救不了的啊！</p>
+<p><img src="/img/114514.png" srcset="/img/loading.gif" lazyload alt="Homo"></p>
 
                 
               </div>
@@ -370,7 +371,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Windows/">#Windows</a>
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
     </div>
   
@@ -399,21 +400,23 @@
         </div>
       
       
-      <div class="license-meta-item">
-        <div>许可协议</div>
-        <div>
-          
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
             
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
             
-              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-              <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                <i class="iconfont icon-by"></i>
-              </span>
-              </a>
-            
-          
+          </div>
         </div>
-      </div>
+      
     </div>
     <div class="license-icon iconfont"></div>
   </div>
@@ -447,8 +450,10 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="waline"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#waline', function() {
@@ -473,7 +478,8 @@
   <noscript>Please enable JavaScript to view the comments</noscript>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -485,7 +491,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -652,22 +661,34 @@
     var boardCtn = jQuery('#board-ctn');
     var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init({
+    window.tocbot.init(Object.assign({
       tocSelector     : '#toc-body',
       contentSelector : '.markdown-body',
-      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
       linkClass       : 'tocbot-link',
       activeLinkClass : 'tocbot-active-link',
       listClass       : 'tocbot-list',
       isCollapsedClass: 'tocbot-is-collapsed',
       collapsibleClass: 'tocbot-is-collapsible',
-      collapseDepth   : CONFIG.toc.collapseDepth || 0,
       scrollSmooth    : true,
-      headingsOffset  : -boardTop
-    });
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
   });
 </script>
 
@@ -696,6 +717,21 @@
       window.anchors.options.class = 'anchorjs-link-left';
     }
     window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
   });
 </script>
 

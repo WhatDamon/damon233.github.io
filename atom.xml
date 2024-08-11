@@ -6,7 +6,7 @@
   <link href="http://damon233.js.org/atom.xml" rel="self"/>
   
   <link href="http://damon233.js.org/"/>
-  <updated>2024-08-10T07:46:03.776Z</updated>
+  <updated>2024-08-11T10:40:19.457Z</updated>
   <id>http://damon233.js.org/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一切都变了，关于VirtualBox 7.1.0 BETA1</title>
+    <link href="http://damon233.js.org/everythingChangeAtVBox710Beta1/"/>
+    <id>http://damon233.js.org/everythingChangeAtVBox710Beta1/</id>
+    <published>2024-08-11T09:56:38.000Z</published>
+    <updated>2024-08-11T10:40:19.457Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>估计很多人都没意识到VBox悄悄更新了这个新测试版本，它在主页新闻中只字未提。</p><p>不管这么多，先看看这是什么玩意！</p><h1 id="主"><a href="#主" class="headerlink" title="主"></a>主</h1><h2 id="时代变啦！！！"><a href="#时代变啦！！！" class="headerlink" title="时代变啦！！！"></a>时代变啦！！！</h2><p>第一条绝对要重磅一点，VBox换图标了！</p><p><img src="https://149366088.v2.pressablecdn.com/wp-content/uploads/2024/07/virtualbox-new-logo-1.jpg" alt="新图标！图源OMG! Ubuntu"></p><p>个人感觉缺乏辨识度，稍微还有点小丑，但最少看起来简单了很多，即便在当初7.0发布的时候格格不入的设计风格就让我预见到VBox必然会改图标</p><p>当然这个更改也有牺牲，首当其冲的就是长期以来一直很有设计感的传统BIOS启动图标变得更加平庸：</p><p><img src="/img/vbox710b1bios.png" alt="新BIOS"></p><p>当然受到影响的还有关于界面：</p><p><img src="/img/vbox710about.png" alt="关于界面"></p><h2 id="新框架"><a href="#新框架" class="headerlink" title="新框架"></a>新框架</h2><p>看上面的关于界面是否关注到了一个小细节？</p><p>没错，VirtualBox终于用上了Qt6，非常巧的是，Qt6.5这个版本正是去年官方论坛一个请求Qt更新时提到的大版本号，不算过时，即便最新版本已经来到了Qt6.7</p><p>对于使用深色模式且DPI不是100的整数倍的用户而言，这一次更新变化可谓巨大，尤其是对于Windows用户而言，标题栏终于变成黑色了，UI尺寸终于正常了</p><p>当然新框架下UI也被修改了，比如设置界面，多出了Basic（基础）和Expert（专家）两个模式，前者提供的设置项更加基础，并且设置的页面内容被放在了同一页，这点见仁见智了。不过新加的搜索功能的确对新用户非常友好</p><p><img src="/img/vbox711newsettings.png" alt="新设置"></p><h2 id="Apple-Silicon用户狂喜系列"><a href="#Apple-Silicon用户狂喜系列" class="headerlink" title="Apple Silicon用户狂喜系列"></a>Apple Silicon用户狂喜系列</h2><p>VBox 7.1版本正式支持Apple Silicon，现在用户可以在搭载M系列直接处理器的Mac上虚拟化Linux和BSD虚拟机，Windows on Arm没人测试，也不知道</p><p>不过对于直接虚拟化这件事情，x86-on-ARM并不支持OOTB，即便可以手动开启，但启用性能会变差，尤其是带有图形界面的虚拟机操作系统而言。</p><p>只不过什么时候推出适用于Windows on Arm和Linux Arm的VBox？最少macOS这一步已经走出来了</p><h2 id="Linux用户狂喜系列"><a href="#Linux用户狂喜系列" class="headerlink" title="Linux用户狂喜系列"></a>Linux用户狂喜系列</h2><p>这一次，VBox终于支持Wayland主机与虚拟机之间的剪贴板共享了，即便Wayland未来替换掉X11还有很长的路，但这也是好兆头之一</p><p>其他的，更完善的新内核支持这些废话也没必要多说了</p><h2 id="其他无关紧要的小更新"><a href="#其他无关紧要的小更新" class="headerlink" title="其他无关紧要的小更新"></a>其他无关紧要的小更新</h2><ol><li>改进了屏幕录制性能</li><li>远程桌面扩展证书改进</li><li>NAT使用了支持IPv6的新引擎</li><li>EFI添加了Microsoft DB&#x2F;KEX到新的虚拟机</li></ol><h1 id="尾"><a href="#尾" class="headerlink" title="尾"></a>尾</h1><p>这个版本变化幅度相当大，即便里面有很多东西让用户等了好几年</p><p>注意，该版本属于Beta测试版，可能存在严重的BUG，非专业用户不要随便升级，安安心心用稳定版吧，还有一点就是中文还不完全，英语不好的也不太推荐升级</p><p>顺便盲猜一波，估计未来很多图标都会重绘</p><p>下载链接：<a href="https://download.virtualbox.org/virtualbox/7.1.0_BETA1">https://download.virtualbox.org/virtualbox/7.1.0_BETA1</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;p&gt;估计很多人都没意识到VBox悄悄更新了这个新测试版本，它在主页新闻中只字未提。&lt;/p&gt;
+&lt;p&gt;不管这么多，先看看这是什么玩意！&lt;/p&gt;
+&lt;h1 id</summary>
+      
+    
+    
+    
+    
+    <category term="虚拟机" scheme="http://damon233.js.org/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    <category term="VBox" scheme="http://damon233.js.org/tags/VBox/"/>
+    
+    <category term="电脑" scheme="http://damon233.js.org/tags/%E7%94%B5%E8%84%91/"/>
+    
+  </entry>
   
   <entry>
     <title>中国开发社区的问题思考</title>
@@ -125,11 +153,11 @@
     
     
     
-    <category term="电脑" scheme="http://damon233.js.org/tags/%E7%94%B5%E8%84%91/"/>
-    
     <category term="虚拟机" scheme="http://damon233.js.org/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     <category term="VBox" scheme="http://damon233.js.org/tags/VBox/"/>
+    
+    <category term="电脑" scheme="http://damon233.js.org/tags/%E7%94%B5%E8%84%91/"/>
     
   </entry>
   
@@ -465,27 +493,6 @@
     <category term="哔哩哔哩" scheme="http://damon233.js.org/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/"/>
     
     <category term="DamonOS" scheme="http://damon233.js.org/tags/DamonOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不想花钱买新版Bandizip，试试这两款压缩软件</title>
-    <link href="http://damon233.js.org/bxmbandizipshi2apptj-1/"/>
-    <id>http://damon233.js.org/bxmbandizipshi2apptj-1/</id>
-    <published>2020-04-17T05:37:03.000Z</published>
-    <updated>2024-08-10T07:45:55.160Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-Peazip"><a href="#1-Peazip" class="headerlink" title="1. Peazip"></a>1. Peazip</h1><p>这款压缩软件我体验过一段时间，免费开源，非常清爽，另外，它非常配Windows 10的UI，外观的自定义型很强（但比WinRAR要弱一丢丢丢丢……丢丢丢丢丢丢丢）<br>先上张官网宣传图吧（不自己截是因为👴已经把它卸载啦）<br><img src="/img/1587102683619.png"><br>诶？！英文？看不懂？这款软件是完全支持简体中文哒！因为这是一个国外的软件！<br>你要的 <a href="https://www.peazip.org/">官网</a><br>Yeah~~~</p><h1 id="2-360-Zip"><a href="#2-360-Zip" class="headerlink" title="2. 360 Zip"></a>2. 360 Zip</h1><p>不是内个国内版的，是国际版的内个<br>功能和Bandizip一样，同样有压缩包语言（代码页），解决文件名称乱码<br>UI真的，贼好看（对于我的审美）<br>更重要的是，无捆绑无广告，大小才30MB左右<br>上图！<br><img src="/img/1587111989756.png"></p><p>360 Zip国际版 <a href="https://www.360totalsecurity.com/zh-cn/360zip/">官网</a></p><span id="more"></span><p>适合自己才是最好的哟😶</p>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;1-Peazip&quot;&gt;&lt;a href=&quot;#1-Peazip&quot; class=&quot;headerlink&quot; title=&quot;1. Peazip&quot;&gt;&lt;/a&gt;1. Peazip&lt;/h1&gt;&lt;p&gt;这款压缩软件我体验过一段时间，免费开源，非常清爽，另外，它非常配Windows 10的UI，外观的自定义型很强（但比WinRAR要弱一丢丢丢丢……丢丢丢丢丢丢丢）&lt;br&gt;先上张官网宣传图吧（不自己截是因为👴已经把它卸载啦）&lt;br&gt;&lt;img src=&quot;/img/1587102683619.png&quot;&gt;&lt;br&gt;诶？！英文？看不懂？这款软件是完全支持简体中文哒！因为这是一个国外的软件！&lt;br&gt;你要的 &lt;a href=&quot;https://www.peazip.org/&quot;&gt;官网&lt;/a&gt;&lt;br&gt;Yeah~~~&lt;/p&gt;
-&lt;h1 id=&quot;2-360-Zip&quot;&gt;&lt;a href=&quot;#2-360-Zip&quot; class=&quot;headerlink&quot; title=&quot;2. 360 Zip&quot;&gt;&lt;/a&gt;2. 360 Zip&lt;/h1&gt;&lt;p&gt;不是内个国内版的，是国际版的内个&lt;br&gt;功能和Bandizip一样，同样有压缩包语言（代码页），解决文件名称乱码&lt;br&gt;UI真的，贼好看（对于我的审美）&lt;br&gt;更重要的是，无捆绑无广告，大小才30MB左右&lt;br&gt;上图！&lt;br&gt;&lt;img src=&quot;/img/1587111989756.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;360 Zip国际版 &lt;a href=&quot;https://www.360totalsecurity.com/zh-cn/360zip/&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="软件推荐" scheme="http://damon233.js.org/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   

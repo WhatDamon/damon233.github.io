@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>一切都变了，关于VirtualBox 7.1.0 BETA1</title>
+    <link href="/everythingChangeAtVBox710Beta1/"/>
+    <url>/everythingChangeAtVBox710Beta1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>估计很多人都没意识到VBox悄悄更新了这个新测试版本，它在主页新闻中只字未提。</p><p>不管这么多，先看看这是什么玩意！</p><h1 id="主"><a href="#主" class="headerlink" title="主"></a>主</h1><h2 id="时代变啦！！！"><a href="#时代变啦！！！" class="headerlink" title="时代变啦！！！"></a>时代变啦！！！</h2><p>第一条绝对要重磅一点，VBox换图标了！</p><p><img src="https://149366088.v2.pressablecdn.com/wp-content/uploads/2024/07/virtualbox-new-logo-1.jpg" alt="新图标！图源OMG! Ubuntu"></p><p>个人感觉缺乏辨识度，稍微还有点小丑，但最少看起来简单了很多，即便在当初7.0发布的时候格格不入的设计风格就让我预见到VBox必然会改图标</p><p>当然这个更改也有牺牲，首当其冲的就是长期以来一直很有设计感的传统BIOS启动图标变得更加平庸：</p><p><img src="/img/vbox710b1bios.png" alt="新BIOS"></p><p>当然受到影响的还有关于界面：</p><p><img src="/img/vbox710about.png" alt="关于界面"></p><h2 id="新框架"><a href="#新框架" class="headerlink" title="新框架"></a>新框架</h2><p>看上面的关于界面是否关注到了一个小细节？</p><p>没错，VirtualBox终于用上了Qt6，非常巧的是，Qt6.5这个版本正是去年官方论坛一个请求Qt更新时提到的大版本号，不算过时，即便最新版本已经来到了Qt6.7</p><p>对于使用深色模式且DPI不是100的整数倍的用户而言，这一次更新变化可谓巨大，尤其是对于Windows用户而言，标题栏终于变成黑色了，UI尺寸终于正常了</p><p>当然新框架下UI也被修改了，比如设置界面，多出了Basic（基础）和Expert（专家）两个模式，前者提供的设置项更加基础，并且设置的页面内容被放在了同一页，这点见仁见智了。不过新加的搜索功能的确对新用户非常友好</p><p><img src="/img/vbox711newsettings.png" alt="新设置"></p><h2 id="Apple-Silicon用户狂喜系列"><a href="#Apple-Silicon用户狂喜系列" class="headerlink" title="Apple Silicon用户狂喜系列"></a>Apple Silicon用户狂喜系列</h2><p>VBox 7.1版本正式支持Apple Silicon，现在用户可以在搭载M系列直接处理器的Mac上虚拟化Linux和BSD虚拟机，Windows on Arm没人测试，也不知道</p><p>不过对于直接虚拟化这件事情，x86-on-ARM并不支持OOTB，即便可以手动开启，但启用性能会变差，尤其是带有图形界面的虚拟机操作系统而言。</p><p>只不过什么时候推出适用于Windows on Arm和Linux Arm的VBox？最少macOS这一步已经走出来了</p><h2 id="Linux用户狂喜系列"><a href="#Linux用户狂喜系列" class="headerlink" title="Linux用户狂喜系列"></a>Linux用户狂喜系列</h2><p>这一次，VBox终于支持Wayland主机与虚拟机之间的剪贴板共享了，即便Wayland未来替换掉X11还有很长的路，但这也是好兆头之一</p><p>其他的，更完善的新内核支持这些废话也没必要多说了</p><h2 id="其他无关紧要的小更新"><a href="#其他无关紧要的小更新" class="headerlink" title="其他无关紧要的小更新"></a>其他无关紧要的小更新</h2><ol><li>改进了屏幕录制性能</li><li>远程桌面扩展证书改进</li><li>NAT使用了支持IPv6的新引擎</li><li>EFI添加了Microsoft DB&#x2F;KEX到新的虚拟机</li></ol><h1 id="尾"><a href="#尾" class="headerlink" title="尾"></a>尾</h1><p>这个版本变化幅度相当大，即便里面有很多东西让用户等了好几年</p><p>注意，该版本属于Beta测试版，可能存在严重的BUG，非专业用户不要随便升级，安安心心用稳定版吧，还有一点就是中文还不完全，英语不好的也不太推荐升级</p><p>顺便盲猜一波，估计未来很多图标都会重绘</p><p>下载链接：<a href="https://download.virtualbox.org/virtualbox/7.1.0_BETA1">https://download.virtualbox.org/virtualbox/7.1.0_BETA1</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>虚拟机</tag>
+      
+      <tag>VBox</tag>
+      
+      <tag>电脑</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>中国开发社区的问题思考</title>
     <link href="/chinaDevCommunityProblems/"/>
     <url>/chinaDevCommunityProblems/</url>
@@ -90,11 +113,11 @@
     
     <tags>
       
-      <tag>电脑</tag>
-      
       <tag>虚拟机</tag>
       
       <tag>VBox</tag>
+      
+      <tag>电脑</tag>
       
     </tags>
     
@@ -514,7 +537,7 @@
     <link href="/welcome/"/>
     <url>/welcome/</url>
     
-    <content type="html"><![CDATA[<h2 id="这里是What-Damon的Blog博客哟"><a href="#这里是What-Damon的Blog博客哟" class="headerlink" title="这里是What_Damon的Blog博客哟~~~~"></a>这里是What_Damon的Blog博客哟~~~~</h2><p>肥肠欢迎来到我滴博客😜<br>请尽情滴浏览呀😉</p><h2 id="本站须知"><a href="#本站须知" class="headerlink" title="本站须知"></a>本站须知</h2><h5 id="评论使用："><a href="#评论使用：" class="headerlink" title="评论使用："></a>评论使用：</h5><ul><li>评论功能使用了 Giscus！请遵守 <a href="https://docs.github.com/en/site-policy/github-terms/github-community-guidelines">Github Community Guidelines</a></li></ul><h5 id="文章投稿："><a href="#文章投稿：" class="headerlink" title="文章投稿："></a>文章投稿：</h5><p>光凭我一个人脑补文章肯定不太行，所以我决定允许各位投稿</p><p>投稿内容发布至<a href="mailto:&#119;&#x68;&#97;&#116;&#x64;&#x61;&#x6d;&#111;&#110;&#64;&#x64;&#x61;&#109;&#111;&#110;&#x32;&#x33;&#x33;&#46;&#x74;&#x6f;&#112;">&#119;&#x68;&#97;&#116;&#x64;&#x61;&#x6d;&#111;&#110;&#64;&#x64;&#x61;&#109;&#111;&#110;&#x32;&#x33;&#x33;&#46;&#x74;&#x6f;&#112;</a>，如果您投稿了文章，代表您允许我使用<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0 协议</a>来发布您的文章，如不希望我署您的名称，或者不希望使用CC BY 4.0协议等，请额外说明！</p><ol><li>内容必须是有关<strong>科技数码</strong>的</li><li>不可以带有<strong>色、黄、恐、俗、暴</strong>等内容</li><li>不可以<strong>贬低某人</strong>，或者引战</li><li>不可<strong>发布无用内容</strong></li><li>文章<strong>封面自己制作</strong></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="这里是What-Damon的Blog博客哟"><a href="#这里是What-Damon的Blog博客哟" class="headerlink" title="这里是What_Damon的Blog博客哟~~~~"></a>这里是What_Damon的Blog博客哟~~~~</h2><p>肥肠欢迎来到我滴博客😜<br>请尽情滴浏览呀😉</p><h2 id="本站须知"><a href="#本站须知" class="headerlink" title="本站须知"></a>本站须知</h2><h5 id="评论使用："><a href="#评论使用：" class="headerlink" title="评论使用："></a>评论使用：</h5><ul><li>评论功能使用了 Giscus！请遵守 <a href="https://docs.github.com/en/site-policy/github-terms/github-community-guidelines">Github Community Guidelines</a></li></ul><h5 id="文章投稿："><a href="#文章投稿：" class="headerlink" title="文章投稿："></a>文章投稿：</h5><p>光凭我一个人脑补文章肯定不太行，所以我决定允许各位投稿</p><p>投稿内容发布至<a href="mailto:&#x77;&#x68;&#97;&#x74;&#x64;&#97;&#x6d;&#111;&#x6e;&#x40;&#x64;&#x61;&#x6d;&#x6f;&#x6e;&#x32;&#x33;&#51;&#x2e;&#116;&#x6f;&#112;">&#x77;&#x68;&#97;&#x74;&#x64;&#97;&#x6d;&#111;&#x6e;&#x40;&#x64;&#x61;&#x6d;&#x6f;&#x6e;&#x32;&#x33;&#51;&#x2e;&#116;&#x6f;&#112;</a>，如果您投稿了文章，代表您允许我使用<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0 协议</a>来发布您的文章，如不希望我署您的名称，或者不希望使用CC BY 4.0协议等，请额外说明！</p><ol><li>内容必须是有关<strong>科技数码</strong>的</li><li>不可以带有<strong>色、黄、恐、俗、暴</strong>等内容</li><li>不可以<strong>贬低某人</strong>，或者引战</li><li>不可<strong>发布无用内容</strong></li><li>文章<strong>封面自己制作</strong></li></ol>]]></content>
     
     
     
